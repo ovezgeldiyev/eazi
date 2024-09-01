@@ -1,0 +1,160 @@
+// 1640px
+@include xxxxlg-xxxxxlg {
+  // base start
+  .title-h1 {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  .title-h2 {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  .title-h5 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .title-h6 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .para {
+    font-size: 20px;
+    line-height: 28px;
+    &.big {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &.sm {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.ex {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .auto__container {
+    max-width: 1240px;
+  }
+  // base end
+  // index start
+  @include featu-xxxxlg-xxxxxlg;
+  @include agent-xxxxlg-xxxxxlg;
+  @include gateway-xxxxlg-xxxxxlg;
+  @include career-xxxxlg-xxxxxlg;
+  // index end
+}
+// 1340px
+@include xxlg-xxxlg {
+  // base start
+  .title-h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .title-h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .title-h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .title-h6 {
+    font-size: 18px;
+    line-height: 28px;
+    &.sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .para {
+    font-size: 18px;
+    line-height: 26px;
+    &.big {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    &.ex {
+      font-size: 12px;
+      line-height:18px;
+    }
+  }
+  .auto__container {
+    max-width: 1024px;
+  }
+  // base end
+  // index start
+  @include hero-xxlg-xxxlg;
+  @include featu-xxlg-xxxlg;
+  @include agent-xxlg-xxxlg;
+  @include gateway-xxlg-xxxlg;
+  @include career-xxlg-xxxlg;
+  @include estate-xxlg-xxxlg;
+  @include agent-xxlg-xxxlg;
+  // index end
+}
+// 1024px
+@include lg-xlg {
+  // index start
+  @include featu-lg-xlg;
+  @include career-lg-xlg;
+  @include estate-lg-xlg;
+  @include gateway-lg-xlg;
+  @include agent-lg-xlg;
+  // index end
+}
+// 840px
+@include md-lg {
+  // base start
+  .auto__container {
+    padding: 0 16px;
+  }
+  // base end
+  // index start
+  @include career-md-lg;
+  @include featu-md-lg;
+  @include hero-md-lg;
+  @include agent-md-lg;
+  @include gateway-md-lg;
+  @include career-md-lg;
+  @include estate-md-lg;
+  // index end
+}
+// 700px
+@include sm-md {
+  // index start
+  // @include featu-sm-md;
+  // index end
+}
+// 540px
+@include xsm-sm {
+  // base :start
+  .title-h1 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  .title-h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .title-h5 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .para {
+    font-size: 16px;
+    line-height: 24px;
+    &.big {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  //  base end
+  // index start
+  @include hero-xsm-sm;
+  @include featu-xsm-sm;
+  @include apply-xsm-sm;
+  @include gateway-xsm-sm;
+  @include agent-xsm-sm;
+  // index end
+}
