@@ -1,0 +1,174 @@
+@use "../1-main/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+.discover {
+  margin: 130px 0;
+  &__inner {
+    max-width: 1066px;
+    margin: 0 auto;
+    display: flex;
+    background: $primary-navy;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  &Image {
+    width: 48%;
+    &__inner {
+      width: 100%;
+      height: 100%;
+      padding-bottom: 65%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Content {
+    width: 52%;
+    padding: 50px 24px 50px 38px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__inner {
+      max-width: 444px;
+    }
+    &__title {
+      margin-bottom: 24px;
+      p {
+        font-weight: 400;
+      }
+    }
+    &__buttons {
+      display: flex;
+      margin-bottom: 24px;
+      .button {
+        margin-right: 15px;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          background: $primary-blue;
+        }
+      }
+    }
+    &__form {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      .button {
+        margin-left: 15px;
+        &:hover {
+          background: $primary-blue;
+        }
+      }
+    }
+    &__input {
+      flex: 1;
+      display: flex;
+      input {
+        width: 100%;
+        background: $white;
+        border: 1px solid rgba(20, 40, 69, 0.2);
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-family: $mainFont;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: $primary-navy;
+        &::placeholder {
+          color: rgba(20, 40, 69, 0.6);
+        }
+      }
+    }
+    &__foot {
+      p {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 140%;
+        color: rgba(177, 221, 212, 0.6);
+        a {
+          color: rgba(177, 221, 212, 0.6);
+          text-decoration: underline;
+          &:hover {
+            opacity: 1;
+            color: $primary-coral;
+          }
+        }
+      }
+    }
+    h2 {
+      margin-bottom: 14px;
+    }
+  }
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  .discover {
+    margin: 100px 0;
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .discover {
+    &Content {
+      padding: 40px 24px 40px 30px;
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .discover {
+    &Content {
+      padding: 30px 24px;
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .discover {
+    &__inner {
+      flex-direction: column;
+    }
+    &Image {
+      width: 100%;
+    }
+    &Content {
+      width: 100%;
+      padding: 34px 24px;
+      &__buttons {
+        justify-content: center;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .discover {
+    &Image {
+      &__inner {
+        padding-bottom: 80%;
+      }
+    }
+  }
+}
+// 420px
+@include xxsm-xsm {
+  .discover {
+    &Content {
+      &__form {
+        flex-direction: column;
+      }
+      &__input {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .button {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,333 @@
+@use "../1-main/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+.umap {
+  &__inner {
+    height: 100vh;
+    display: flex;
+    padding-top: 77px;
+  }
+  &Check {
+    position: absolute;
+    top: 0;
+    left: 46px;
+    display: flex;
+    align-items: center;
+    background: $white;
+    border: 1px solid #dcdcdc;
+    white-space: nowrap;
+    padding: 6px;
+    box-shadow: 0px 3.1px 3.1px -1.55px rgba(24, 39, 75, 0.08),
+      0px 1.55px 3.1px -1.55px rgba(24, 39, 75, 0.12);
+    cursor: pointer;
+    &__box {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      margin-right: 12px;
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 2;
+        opacity: 0;
+        &:checked {
+          & ~ span {
+            background: $primary-navy;
+            svg {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $primary-navy;
+        transition: 0.3s ease;
+        color: $white;
+        display: flex;
+        border-radius: 4px;
+        svg {
+          width: 100%;
+          height: 100%;
+          transition: 0.3s ease;
+          opacity: 0;
+        }
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 140%;
+      color: $primary-navy;
+    }
+  }
+  &Banner {
+    width: calc(100% - 665px);
+    position: relative;
+    overflow: hidden;
+    &__tools {
+      position: absolute;
+      top: 24px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      button {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 3.1px 3.1px -1.55px rgba(24, 39, 75, 0.08),
+          0px 1.55px 3.1px -1.55px rgba(24, 39, 75, 0.12);
+        background: $white;
+        border: 1px solid #dcdcdc;
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: $primary-navy;
+        &:hover {
+          color: $white;
+          background: $primary-navy;
+        }
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+    &__zoom {
+      margin-bottom: 14px;
+    }
+    &__layer {
+      margin-bottom: 14px;
+    }
+    img,
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include fullImage;
+    }
+  }
+  &Content {
+    width: 665px;
+    padding: 24px 40px 40px 40px;
+    background: $white;
+    box-shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1),
+      0px 4px 4px -4px rgba(12, 12, 13, 0.05);
+    &__breadcrumbs {
+      display: flex;
+      align-items: center;
+      margin-bottom: 34px;
+      a {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 140%;
+        color: rgba(20, 40, 69, 0.6);
+        &:hover {
+          opacity: 1;
+          color: $primary-coral;
+        }
+      }
+      svg {
+        width: 12px;
+        height: 12px;
+        color: $primary-blue;
+        margin: 0 4px;
+      }
+    }
+    &__selects {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -6px;
+      .select {
+        margin: 6px;
+      }
+    }
+    &__title {
+      margin-bottom: 34px;
+      max-width: 600px;
+    }
+    &__item {
+      margin-bottom: 24px;
+      max-width: 515px;
+      &:last-child {
+        margin: 0;
+      }
+      &-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+        &.dark {
+          a {
+            background: rgba(20, 40, 69, 0.1);
+            border: 1px solid rgba(20, 40, 69, 0.2);
+            &:hover {
+              opacity: 1;
+              background: rgba(20, 40, 69, 0.3);
+            }
+          }
+        }
+        a {
+          font-family: $inter;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: $primary-navy;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          padding: 14px 16px;
+          background: rgba(177, 221, 212, 0.3);
+          border: 1px solid $secondary-blue;
+          border-radius: 900px;
+          margin: 8px;
+          &:hover {
+            opacity: 1;
+            background: $primary-blue;
+          }
+        }
+      }
+      h5,
+      h6 {
+        margin-bottom: 18px;
+      }
+      h5 {
+        font-weight: 600;
+      }
+      h6 {
+        font-weight: 400;
+      }
+    }
+    h3 {
+      margin-bottom: 28px;
+    }
+    .input {
+      position: relative;
+      margin-bottom: 24px;
+      input {
+        padding: 11px 36px 11px 16px;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        z-index: 1;
+        pointer-events: none;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  .umap {
+    &Banner {
+      width: calc(100% - 440px);
+    }
+    &Content {
+      padding: 24px;
+      width: 440px;
+      &__title {
+        margin-bottom: 24px;
+      }
+      &__selects {
+        flex-wrap: wrap;
+        .select {
+          width: calc(50% - 12px);
+        }
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .umap {
+    &__inner {
+      flex-direction: column;
+      height: unset;
+    }
+    &Banner {
+      height: 50vh;
+      width: 100%;
+    }
+    &Content {
+      width: 100%;
+      &__breadcrumbs {
+        margin-bottom: 20px;
+      }
+      &__item {
+        &-row {
+          margin: 0 -5px;
+          a {
+            margin: 5px;
+          }
+        }
+        h5,
+        h6 {
+          margin-bottom: 12px;
+        }
+      }
+      .input {
+        margin-bottom: 14px;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// 1024px
+@include lg-xlg {
+  .umap {
+  }
+}
+// 930px
+@include md-lg {
+  .umap {
+  }
+}
+// 750px
+@include sm-md {
+  .umap {
+  }
+}
+// 650px
+@include sm-md-extra {
+  .umap {
+  }
+}
+// 540px
+@include xsm-sm {
+  .umap {
+    &__inner {
+      padding-top: 70px;
+    }
+    &Banner {
+      &__tools {
+        top: 20px;
+        left: 16px;
+      }
+    }
+  }
+}
+// 420px
+@include xxsm-xsm {
+  .umap {
+  }
+}

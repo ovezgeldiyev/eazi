@@ -1,0 +1,30 @@
+// @use "./easypick.css" as *;
+@use "./stylesheet.scss" as *;
+
+// 1-main components
+@use "./components/1-main/variables.scss" as *;
+@use "./components/1-main/mixin.scss" as *;
+@use "./components/1-main/nulifier.scss" as *;
+// 2-layout components
+@use "./components/2-layout/components.scss" as *;
+@use "./components/2-layout/header.scss" as *;
+@use "./components/2-layout/nav.scss" as *;
+@use "./components/2-layout/footer.scss" as *;
+@use "./components/2-layout/search.scss" as *;
+
+// 3-pages components
+@use "./components/3-pages/index.scss" as *;
+@use "./components/3-pages/sellers.scss" as *;
+@use "./components/3-pages/agent.scss" as *;
+@use "./components/3-pages/buyers.scss" as *;
+@use "./components/3-pages/login.scss" as *;
+@use "./components/3-pages/profile.scss" as *;
+@use "./components/3-pages/offers.scss" as *;
+@use "./components/3-pages/dash.scss" as *;
+@use "./components/3-pages/map.scss" as *;
+@use "./components/3-pages/valuation.scss" as *;
+
+
+@use "./components/2-layout/slick-theme.scss" as *;
+@use "./components/2-layout/slick.scss" as *; 
+ 
